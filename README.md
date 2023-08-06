@@ -1,66 +1,100 @@
-# Dnsbruter - Subdomain Bruteforcing Tool
+# Dnsbruter - Active Subdomain Enumeration Tool
 
-Dnsbruter is a command-line tool written in Python that allows users to perform active subdomain enumeration through brute-forcing. The tool uses multi-threading to speed up the process and supports verbose mode for displaying found subdomains and invalid subdomains.
+Dnsbruter is a command-line tool designed for active subdomain enumeration through brute-forcing techniques. It helps security researchers and penetration testers discover potential subdomains for a given target domain. The tool allows users to customize their search and provides options for saving and displaying results.
 
-## Prerequisites
 
-Before running Dnsbruter, make sure you have the following installed:
+## Features
 
-- Python 3.x
-- Required Python packages: `dns.resolver`, `requests`, `colorama`
+Dnsbruter comes with the following features:
 
-You can install the required packages using the following command:
-
-```bash
-pip install dnspython requests colorama
-```
+- **-d or --domain**: Specify the target domain for subdomain enumeration.
+- **-o or --output**: Save the results of the enumeration to a specified output file.
+- **-v**: Enable verbose mode to display found and valid domains.
+- **-i or --invalid**: Print invalid domains during the enumeration process.
+- **-t or --threads**: Define the number of threads to use for faster processing.
 
 ## Installation
 
-1. Clone the Dnsbruter repository from GitHub:
+### Linux Users (Binary)
 
-```bash
-git clone https://github.com/sanjai-AK47/Dnsbruter.git
-```
+For Linux users, you can move the provided binary file to a directory included in your system's PATH. This allows you to use the tool from anywhere in the terminal.
 
-2. Change directory to the Dnsbruter folder:
+1. Download the binary file from the [Releases](https://github.com/sanjai-AK47/Dnsbruter/releases) section of the repository.
+2. Move the binary file to a location included in your system's PATH, such as `/usr/local/bin/`:
 
-```bash
-cd Dnsbruter
-```
+   ```bash
+   sudo mv dnsbruter /usr/local/bin/
+   ```
 
-3. Install the required dependencies:
+3. Make the binary file executable:
 
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   sudo chmod +x /usr/local/bin/dnsbruter
+   ```
+
+### All Users
+
+If you prefer to run the tool directly using Python, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/sanjai-AK47/Dnsbruter.git
+   cd Dnsbruter
+   ```
+
+2. Install the dependencies from the `requirements.txt` file:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the tool using the Python file:
+
+   ```bash
+   python dnsbruter.py [options]
+   ```
 
 ## Usage
 
-```bash
-python dnsbruter.py -d <target_domain> -t <num_threads> [-o <output_file>] [-v] [-i]
-```
-
-### Options:
-
-- `-d, --domain <target_domain>`: Specifies the target domain for active subdomain enumeration.
-
-- `-t, --threads <num_threads>`: Defines the number of threads to use for multi-threading. Use a value less than or equal to 100 for safety.
-
-- `-o, --output <output_file>`: (Optional) Specifies the filename to save the output results. If not provided, results will be saved in a file named `{target_domain}_results.txt`.
-
-- `-v, --verbose`: (Optional) Enable verbose mode to print found subdomains to the console.
-
-- `-i, --invalid`: (Optional) Enable invalid mode to print invalid or not found subdomains to the console.
-
-## Example
+To start using Dnsbruter, use the following command-line options:
 
 ```bash
-python dnsbruter.py -d example.com -t 50 -o output.txt -v -i
+python3 dnsbruter.py -h
+usage: dnsbruter.py [-h] [-d DOMAIN] [-w WORDLIST] [-o OUTPUT] [-v] [-t THREADS] [-i]
+
+[INFO]: A Subdomain Brutforcer for active subomain enumeration
+
+options:
+  -h, --help            show this help message and exit
+  -d DOMAIN, --domain DOMAIN
+                        [INFO]: Domain name for active subdomain enumeration
+  -w WORDLIST, --wordlist WORDLIST
+                        [INFO]: Wordlist that contains list of subdomain for brutforcing
+  -o OUTPUT, --output OUTPUT
+                        [INFO]: Filename to save the output
+  -v, --verbose         [INFO]: Enabling verbose will print the found subdomain
+  -t THREADS, --threads THREADS
+                        [INFO]: Thread level to make the process to Multiprocess
+  -i, --invalid         INVALIDS
+                        [INFO]: Enabling invalid will print the invalid or not found subdomains
+
 ```
 
-This command will start the subdomain enumeration process for the target domain `example.com` using 50 threads. The found subdomains will be displayed on the console due to the verbose mode. Invalid or not found subdomains will also be shown. The results will be saved in the `output.txt` file.
+**Example:**
 
-## Disclaimer
+```bash
+dnsbruter -d example.com -o output.txt -v -i -t 10
+```
 
-This tool is intended for legal and ethical use only. Unauthorized access to systems and services is strictly prohibited. The developer is not responsible for any misuse or damage caused by this tool. Use it responsibly and with the necessary permissions.
+This command will perform active subdomain enumeration on the `example.com` domain using 10 threads, save the results to `output.txt`, display found and valid domains in verbose mode, and print invalid domains during the enumeration process.
+
+Please note that using this tool for any unauthorized or malicious activities is strictly prohibited. Make sure to obtain proper authorization before scanning any target.
+
+## Contributing
+
+If you find any issues or have ideas to improve Dnsbruter, feel free to contribute to the project. You can create pull requests or open issues on the [GitHub repository](https://github.com/sanjai-AK47/Dnsbruter).
+
+
+
+We hope this tool proves useful for your subdomain enumeration needs. Happy hacking! :rocket:
