@@ -74,5 +74,6 @@ dnsbruter --domain google.com --output output.txt --verbose  --threads 50 --conc
 
 This command is recommonded for all and will perform perfect active subdomain enumeration on the `google.com` domain using 50 threads + 5 concurrecy multiprocessing, save the results to `output.txt`, display found and valid domains in verbose mode, and print invalid domains during the enumeration process if the concise mode is enabled
 
+Show you love ❤️ and give  ⭐ for [Dnsbruter](https://github.com/sanjai-AK47/Dnsbruter)
 
 We hope this tool proves useful for your subdomain enumeration needs. Happy hacking! :rocket:
