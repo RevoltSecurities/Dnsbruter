@@ -13,6 +13,7 @@ Dnsbruter comes with the following features:
 -  Main focued in concurrecy for brutforcing the subdomains
 -  Able to save output Whether its a directory or text file
 -  User defined wordlist or built-in wordlist provided for brutforcing subdomains
+-  Dnsbruter works like NSE script of [nmap](https://nmap.org/nsedoc/scripts/dns-brute.html) to find subdomains by brutforcing
 
 ## Installation
 
