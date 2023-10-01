@@ -3,98 +3,75 @@
 Dnsbruter is a command-line tool designed for active subdomain enumeration through brute-forcing techniques. It helps security researchers and penetration testers discover potential subdomains for a given target domain. The tool allows users to customize their search and provides options for saving and displaying results.
 
 
-## Features
+## New Features
 
 Dnsbruter comes with the following features:
 
-- **-d or --domain**: Specify the target domain for subdomain enumeration.
-- **-o or --output**: Save the results of the enumeration to a specified output file.
-- **-v**: Enable verbose mode to display found and valid domains.
-- **-i or --invalid**: Print invalid domains during the enumeration process.
-- **-t or --threads**: Define the number of threads to use for faster processing.
+-  Define the number of threads to use for faster processing.
+-  Define the concurrency for multiple processing for brutforcing subdomains
+-  User desired verbose and concise mode to print valid
+-  Main focued in concurrecy for brutforcing the subdomains
+-  Able to save output Whether its a directory or text file
+-  User defined wordlist or built-in wordlist provided for brutforcing subdomains
 
 ## Installation
 
-### Linux Users (Binary)
+### ALL Users
 
-For Linux users, you can move the provided binary file to a directory included in your system's PATH. This allows you to use the tool from anywhere in the terminal.
-
-1. Download the binary file from the [Releases](https://github.com/sanjai-AK47/Dnsbruter/releases) section of the repository.
-2. Move the binary file to a location included in your system's PATH, such as `/usr/local/bin/`:
+### Method 1:
 
    ```bash
-   sudo mv dnsbruter /usr/local/bin/
+   pip install dnsbruter
+
+   dnsbruter -h
    ```
 
-3. Make the binary file executable:
-
-   ```bash
-   sudo chmod +x /usr/local/bin/dnsbruter
-   ```
-
-### All Users
-
-If you prefer to run the tool directly using Python, follow these steps:
-
-1. Clone the repository:
-
+### Method 2:
    ```bash
    git clone https://github.com/sanjai-AK47/Dnsbruter.git
    cd Dnsbruter
+   pip install .
+   dnsbruter -h
    ```
 
-2. Install the dependencies from the `requirements.txt` file:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run the tool using the Python file:
-
-   ```bash
-   python dnsbruter.py [options]
-   ```
 
 ## Usage
 
 To start using Dnsbruter, use the following command-line options:
 
 ```bash
-python3 dnsbruter.py -h
-usage: dnsbruter.py [-h] [-d DOMAIN] [-w WORDLIST] [-o OUTPUT] [-v] [-t THREADS] [-i]
+dnsbruter -h                                                                                      
+usage: dnsbruter [-h] [-d DOMAIN] [-w WORDLIST] [-o OUTPUT] [-v] [-cn Concise] [-t THREADS] [-C CONCURRENCY]
 
-[INFO]: A Subdomain Brutforcer for active subomain enumeration
+[INFO]: Discover hidden subdomains effortlessly with Dnsbruter
 
 options:
   -h, --help            show this help message and exit
   -d DOMAIN, --domain DOMAIN
-                        [INFO]: Domain name for active subdomain enumeration
+                        [INFO]: Target name to find hidden subdomains
   -w WORDLIST, --wordlist WORDLIST
-                        [INFO]: Wordlist that contains list of subdomain for brutforcing
+                        [INFO]: Wordlist that contains a list of subdomains for bruteforcing
   -o OUTPUT, --output OUTPUT
                         [INFO]: Filename to save the output
-  -v, --verbose         [INFO]: Enabling verbose will print the found subdomain
+  -v, --verbose         [INFO]: Verbose mode will print the valid subdomains that found
+  -cn, --concise        [INFO]: Concise mode will print the invalid subdomains that found
   -t THREADS, --threads THREADS
-                        [INFO]: Thread level to make the process to Multiprocess
-  -i, --invalid         INVALIDS
-                        [INFO]: Enabling invalid will print the invalid or not found subdomains
+                        [INFO]: Thread level for Multiple Threads
+  -C CONCURRENCY, --concurrency CONCURRENCY
+                        [INFO]: Concurrency level for Concurrency Process
 
 ```
 
 **Example:**
 
+
+![Screenshot from 2023-10-01 23-12-08](https://github.com/sanjai-AK47/Dnsbruter/assets/119435129/29a1da5a-30a2-4f98-9f50-9768989fd112)
+
 ```bash
-dnsbruter -d example.com -o output.txt -v -i -t 10
+dnsbruter --domain google.com --output output.txt --verbose  --threads 50 --concurrency 5 --wordlist /path/to/wordlists
 ```
 
-This command will perform active subdomain enumeration on the `example.com` domain using 10 threads, save the results to `output.txt`, display found and valid domains in verbose mode, and print invalid domains during the enumeration process.
-
-Please note that using this tool for any unauthorized or malicious activities is strictly prohibited. Make sure to obtain proper authorization before scanning any target.
-
-## Contributing
-
-If you find any issues or have ideas to improve Dnsbruter, feel free to contribute to the project. You can create pull requests or open issues on the [GitHub repository](https://github.com/sanjai-AK47/Dnsbruter).
-
+This command is recommonded for all and will perform perfect active subdomain enumeration on the `google.com` domain using 50 threads + 5 concurrecy multiprocessing, save the results to `output.txt`, display found and valid domains in verbose mode, and print invalid domains during the enumeration process if the concise mode is enabled
 
 
 We hope this tool proves useful for your subdomain enumeration needs. Happy hacking! :rocket:
