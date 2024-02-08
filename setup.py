@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='DNSBruter',
-    version='1.0.2',
+    version='1.0.3',
     author='D.Sanjai Kumar',
     author_email='bughunterz0047@gmail.com',
     description='A next level tool for subdomain bruteforcing',
