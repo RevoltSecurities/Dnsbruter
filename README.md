@@ -1,3 +1,5 @@
+
+https://github.com/sanjai-AK47/Dnsbruter/assets/119435129/7dff92b0-0af4-4755-b229-6a23b366c05e
 # Dnsbruter - Asynchronous Dns Bruteforcing Tool
 
 
@@ -22,11 +24,19 @@
 
 ### Method 2:
    ```bash
+
+
+
    git clone https://github.com/sanjai-AK47/Dnsbruter.git
    cd Dnsbruter
    pip install .
    dnsbruter -h
    ```
+
+
+
+https://github.com/sanjai-AK47/Dnsbruter/assets/119435129/ad46775f-1f17-4084-b619-06219e03c93e
+
 
 
 ## Usage
