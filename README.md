@@ -1,5 +1,4 @@
 
-https://github.com/sanjai-AK47/Dnsbruter/assets/119435129/7dff92b0-0af4-4755-b229-6a23b366c05e
 # Dnsbruter - Asynchronous Dns Bruteforcing Tool
 
 
@@ -34,8 +33,6 @@ https://github.com/sanjai-AK47/Dnsbruter/assets/119435129/7dff92b0-0af4-4755-b22
    ```
 
 
-
-https://github.com/sanjai-AK47/Dnsbruter/assets/119435129/ad46775f-1f17-4084-b619-06219e03c93e
 
 
 
