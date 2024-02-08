@@ -1,4 +1,4 @@
-# Dnsbruter - Asynchornous Dns Bruteforcing Tool
+# Dnsbruter - Asynchronous Dns Bruteforcing Tool
 
 
 ### V1.0.2 features:
