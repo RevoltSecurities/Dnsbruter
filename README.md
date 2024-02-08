@@ -1,12 +1,13 @@
 # Dnsbruter - Asynchronous Dns Bruteforcing Tool
 
 
-### V1.0.2 features:
+### V1.0.3 features:
 
 - Asynchronous and concurrent bruteforcing
 - Manages high level threads and wordlists
 - Improved performance and usages in commands of dnsbruter
 - User desired console for outputs
+- Resolved issues in updating dnsbruter
 
 ### Installation
 
