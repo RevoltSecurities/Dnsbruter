@@ -51,7 +51,7 @@ def updateme():
     
     latest = check_version()
     
-    version = "v1.0.2"
+    version = "v1.0.3"
     
     if latest == version:
         
@@ -74,7 +74,7 @@ def version():
     
     latest = check_version()
     
-    version = "v1.0.2"
+    version = "v1.0.3"
     
     if latest == version:
         
@@ -132,6 +132,10 @@ def handler():
     if args.help:
         
         help()
+        
+    if args.update:
+        
+        updateme()
             
     if args.version:
         
