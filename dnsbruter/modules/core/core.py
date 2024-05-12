@@ -169,8 +169,6 @@ async def _wildcard_(subdomain, args, resolver):
         random_subdomain = ''.join(random.choice(string.ascii_lowercase) for _ in range(10))
         random_domain = f"{random_subdomain}.{subdomain}"
         response = await resolver.query(random_domain, 'A')
-        if response:
-            print(subdomain)
         ips = [ip.host for ip in response]
         hosts = ips if ips else []
         return hosts
