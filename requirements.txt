@@ -1,0 +1,7 @@
+aiodns>=3.2.0
+aiofiles>=23.2.1
+alive_progress>=3.1.4
+art>=6.1
+colorama>=0.4.6
+Requests>=2.31.0
+urllib3>=1.26.18
