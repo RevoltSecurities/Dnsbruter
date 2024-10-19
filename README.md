@@ -96,7 +96,7 @@ pip install --no-deps --force-reinstall --break-system-packages git+https://gith
 #### pipx
 requires pipx to be installed with latest python version
 ```pipx
-pipx install git+https://github.com/RevoltSecurities/Dnsbruter.git --break-system-packages
+pipx install git+https://github.com/RevoltSecurities/Dnsbruter.git
 ```
 
 ### About:
