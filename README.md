@@ -100,9 +100,15 @@ pipx install git+https://github.com/RevoltSecurities/Dnsbruter.git
 ```
 
 #### Docker
-1. Build the Docker image ``docker build -t dnsbruter .``
-2. Usage - ``docker run --rm -it -v /path/to/your/wordlist.txt:/opt/best-dns-wordlist.txt -v /path/to/your/resolvers:/opt/resolvers dnsbruter -d google.com -w /opt/best-dns-wordlist.txt --resolver /opt/resolvers/resolvers.txt --output output.txt``
-
+Build the Docker image
+```bash
+git clone https://github.com/RevoltSecurities/Dnsbruter.git && cd Dnsbruter
+sudo docker build -t dnsbruter .
+```
+> Docker Usage
+>```
+>sudo docker run --rm -it -v /path/to/wordlist.txt:/opt/wordlist.txt -v $(pwd):/output dnsbruter -d google.com -w /opt/wordlist.txt --output /output/test.txt
+>```
 
 ### About:
 The Dnsbruter is a open source tool for all Security Researchers and CyberSecurity people to use in their security assesments and information gathering process which helps them lot and We encourage open source contributor to help for Dnsbruter
