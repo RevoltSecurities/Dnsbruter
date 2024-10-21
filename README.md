@@ -1,12 +1,12 @@
 
-# Dnsbruter - Asynchronous Dns Bruteforcing Tool
+# Dnsbruter - Asynchronous DNS Bruteforcing Tool
 
-Dnsbruter an Asynchronous Dns bruteforcing and Fuzzing  Tool for Penetration Testers and Ethical hackers.
-it used to bruteforce and fuzz for domain names in any position of input using BRUT word in it.
+Dnsbruter an Asynchronous DNS Bruteforcing and Fuzzing Tool for Penetration Testers and Ethical hackers.
+It used to bruteforce and fuzz for domain names in any position of input using **BRUT** word in it.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/RevoltSecurities/Dnsbruter) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/RevoltSecurities/Dnsbruter) [![GitHub license](https://img.shields.io/github/license/RevoltSecurities/Dnsbruter)](https://github.com/RevoltSecurities/Dnsbruter/blob/main/LICENSE) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/d-sanjai-kumar-109a7227b/)
 
-### features:
+### Features:
 <h1 align="center">
   <img src="https://github.com/RevoltSecurities/Dnsbruter/assets/119435129/51cb47ce-2a9d-49f5-a547-bae184a5c19e" width="700px">
   <br>
@@ -76,7 +76,7 @@ dnsbruter -h
 ```
 
 ### Uses of Dnsbruter:
-Dnsbruter is highly asynchronous and concurrent dns brutforcing and fuzzing tool . Dnsbruter can be used to bruteforce for valid subdomains and also can be used to FUZZ in any position the domain for example the normal bruteforce domain can be passed as
+Dnsbruter is highly asynchronous and concurrent DNS bruteforcing and fuzzing tool. Dnsbruter can be used to bruteforce for valid subdomains and also can be used to FUZZ in any position the domain for example the normal bruteforce domain can be passed as
 `admin.google.com` and default dnsbruter checks for domain is valid and it have wildcard dns are not to ensure get accurate results and the Fuzz method domain can be passed for example `adminBRUT.google.com` and the BRUT word is used for Fuzz method like we use FUZZ in tools like `ffuf` and when BRUT is passed in domain the Dnsbruter will not checks for valid domain because for fuzzing and this also applies to wildcard records of it. Dnsbruter can run more concurrent and powerfull but its all depends on the users **network speed** and resolvers used. Dnsbruter is runs with ligth weight threads which is a advantage for low end **VPS** users and can handle high loads wordlist without causing any system CPU's loads so Dnsbruter supports well in your low end system and it will try best not crash your network like `puredns` so it will be good alternative tool for you.
 
 <h1 align="center">
@@ -85,7 +85,7 @@ Dnsbruter is highly asynchronous and concurrent dns brutforcing and fuzzing tool
 </h1>
 
 ### Installation:
-Dnsbruter can be installed easily with tools using `pip` & `pipx` to install the tool easily and follow the below method of installation.
+Dnsbruter can be installed easily with tools using `pip`, `pipx` & `Docker` to install the tool easily and follow the below method of installation.
 
 #### pip 
 requires pip need to be installed with latest python version
@@ -98,6 +98,17 @@ requires pipx to be installed with latest python version
 ```pipx
 pipx install git+https://github.com/RevoltSecurities/Dnsbruter.git
 ```
+
+#### Docker
+Build the Docker image
+```bash
+git clone https://github.com/RevoltSecurities/Dnsbruter.git && cd Dnsbruter
+sudo docker build -t dnsbruter .
+```
+> Docker Usage
+>```
+>sudo docker run --rm -it -v /path/to/wordlist.txt:/opt/wordlist.txt -v $(pwd):/output dnsbruter -d google.com -w /opt/wordlist.txt --output /output/test.txt
+>```
 
 ### About:
 The Dnsbruter is a open source tool for all Security Researchers and CyberSecurity people to use in their security assesments and information gathering process which helps them lot and We encourage open source contributor to help for Dnsbruter
