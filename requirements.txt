@@ -1,0 +1,10 @@
+aiodns>=3.2.0
+aiofiles>=24.1.0
+alive_progress>=3.2.0
+art>=6.1
+asynciolimiter>=1.1.0.post3
+colorama>=0.4.4
+Requests>=2.32.3
+setuptools>=68.1.2
+setuptools>=75.2.0
+uvloop>=0.21.0
