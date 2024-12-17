@@ -1,10 +1,15 @@
 # Dnsbruter - Asynchronous DNS Bruteforcing Tool
 
+<h1 align="center">
+  <img src="img/dnsbruter.webp" alt="Dnsbruter" width="450px">
+  <br>
+</h1>
+
 Dnsbruter is a lightweight, fast, and smooth asynchronous DNS brute-forcing and fuzzing tool designed for penetration testers, ethical hackers, and anyone conducting active attack surface reconnaissance. This tool helps you discover subdomains and identify vulnerabilities in it.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/RevoltSecurities/Dnsbruter) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/RevoltSecurities/Dnsbruter) [![GitHub license](https://img.shields.io/github/license/RevoltSecurities/Dnsbruter)](https://github.com/RevoltSecurities/Dnsbruter/blob/main/LICENSE) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/d-sanjai-kumar-109a7227b/)
 
-### V1.0.5 Features:
+### V1.0.6 Features:
 
 <h1 align="center">
   <img src="https://github.com/RevoltSecurities/Dnsbruter/assets/119435129/51cb47ce-2a9d-49f5-a547-bae184a5c19e" width="700px">
