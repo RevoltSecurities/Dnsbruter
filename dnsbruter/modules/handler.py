@@ -32,7 +32,7 @@ extender()
 args = cli()
 banner = banner()
 
-git = "v1.0.5"
+git = "v1.0.6"
 
 def git_version():
     try:
@@ -79,7 +79,7 @@ async def handler():
         if args.help:
             bannerlog(banner)
             help()
-            exit(1)
+            exit(0)
         if not args.silent:
             bannerlog(banner)
             if not args.disable_check:
@@ -90,6 +90,7 @@ async def handler():
                 logger(f"dnsbruter requires wordlist to run, please provide wordlist", "warn")
                 exit(1)
             await domain_handler([args.domain], args)
+            exit(0)
     
         if args.domain_list:
             if not args.wordlist:
@@ -99,6 +100,7 @@ async def handler():
             if domains is None:
                 exit(1)
             await domain_handler(domains, args)
+            exit(0)
             
         if args.update:
             
@@ -136,6 +138,7 @@ async def handler():
                     domain = domain.strip()
                     domains.append(domain)
             await domain_handler(domains, args)
+            exit(0)
     except (KeyboardInterrupt, asyncio.CancelledError):
         exit()
     except Exception as e:
